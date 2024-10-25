@@ -1,0 +1,208 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #2d2d2d  !important;
+    justify-content: center;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 70px;
+    color: #00ca9e;
+}
+
+h2 {
+    font-size: 40px;
+    color: #00ca9e;
+}
+
+p {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+#parking-status {
+    height: 100px;
+    width: 250px;
+    line-height: 0.05;
+    flex-direction: column;
+    display: flex;
+    border: 1px solid white;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#controls {
+    flex-direction: column;
+    display: flex;
+    height: 220px;
+    width: 270px;
+    border: 1px solid white;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#toggle-button {
+
+    font-size: 16px;
+    height: 80px;
+    width: 80px;
+    color: #fff;
+    background-color: #717171;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-content: center;
+}
+
+#toggle-button.on {
+    background-color: #00ca9e; /* สีเขียวสำหรับสถานะเปิด */
+}
+
+#toggle-button.off {
+    background-color: #f44336; /* สีแดงสำหรับสถานะปิด */
+}
+
+/* สถานะการแสดงผล */
+#parking-status p, #controls p {
+    font-size: 1.2em;
+    color: #ffffff;
+   
+}
+
+.slider-container {
+    flex-direction: column;
+    display: flex;
+    height: 90px;
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    border: 1px solid white;
+    text-align: left;
+    color: #fff;
+    justify-content: center;
+    line-height: 2;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 15px;
+    border-radius: 5px;
+    background: #717171;
+    outline: none;
+    opacity: 0.7;
+    transition: opacity .2s;
+}
+
+input[type="range"]:hover {
+    opacity: 1;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #00ca9e;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #00ca9e;
+    cursor: pointer;
+}
+
+#tool-container {
+    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงในแถว */
+    justify-content: space-between; /* จัดระเบียบให้มีระยะห่างระหว่างรายการ */
+    margin: 30px; /* ระยะห่างรอบๆ tool-container */
+    padding: 20px;
+}
+
+#tool-container > div {
+    flex: 1; /* ทำให้แต่ละคอลัมน์มีขนาดเท่า ๆ กัน */
+    margin: 0 10px; /* ระยะห่างระหว่างคอลัมน์ */
+    padding: 10px; /* ขนาดของแต่ละคอลัมน์ */
+}
+
+#left-tool-container {
+    align-content: center;
+    
+}
+
+.nav {
+    width: 100%; 
+    background-color: #1a1a1a;
+    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+}
+
+.nav-pills .nav-link {
+    border-radius: 0; /* ทำให้มุมไม่โค้งมน */
+    background-color: #00ca9e; /* เปลี่ยนสีพื้นหลัง */
+    color: white; /* เปลี่ยนสีตัวอักษร */
+}
+
+.nav-pills .nav-link.active {
+    background-color: #00ca9e !important; /* สีพื้นหลังที่เข้มขึ้นสำหรับลิงก์ที่ถูกเลือก */
+    color: #00ca9e;
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #00ca9e; /* สีพื้นหลังเมื่อเอาเมาส์ไปวาง */
+    color: white; /* รักษาสีตัวอักษรให้ขาว */
+}
+
+.banner {
+    position: relative; /* ตั้งค่า position เป็น relative */
+    background-image: url('photo/parking.jpg'); /* เปลี่ยน path ให้เป็นที่อยู่ของรูปภาพ */
+    width: 100%;
+    background-size: cover; /* ทำให้ภาพครอบคลุมทั้งพื้นที่ */
+    background-position: center; /* จัดตำแหน่งภาพกลาง */
+    height: 300px; /* กำหนดความสูงของ Banner */
+    display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่ง */
+    align-items: center; /* จัดแนวกลางในแนวตั้ง */
+    justify-content: center; /* จัดแนวกลางในแนวนอน */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+    color: white; /* เปลี่ยนสีตัวอักษรให้เป็นสีขาว */
+}
+
+.banner::before {
+    content: ''; /* ใช้สำหรับสร้างเลเยอร์ */
+    position: absolute; /* ตั้งค่า position เป็น absolute */
+    top: 0; /* ให้เริ่มที่ด้านบน */
+    left: 0; /* ให้เริ่มที่ด้านซ้าย */
+    right: 0; /* ให้กว้างเต็มพื้นที่ */
+    bottom: 0; /* ให้ยาวเต็มพื้นที่ */
+    background-color: rgba(0, 0, 0, 0.65); /* สีดำโปร่งใส 50% */
+    z-index: 1; /* ตั้งค่า z-index เพื่อให้เลเยอร์นี้อยู่ด้านหลัง */
+}
+
+.banner h1, .banner p {
+    position: relative; /* ตั้งค่า position เป็น relative */
+    z-index: 2; /* ตั้งค่า z-index เพื่อให้ข้อความอยู่เหนือเลเยอร์โปร่งใส */
+}
