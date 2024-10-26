@@ -1,3 +1,4 @@
+
 body {
     display: flex;
     flex-direction: column;
@@ -7,19 +8,8 @@ body {
     font-family: 'Kanit', sans-serif;
     background-color: #2d2d2d  !important;
     justify-content: center;
-    animation: fadeIn 0.5s ease-in forwards;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 
 header {
     text-align: center;
@@ -36,6 +26,12 @@ h2 {
     font-size: 30px;
     color: #00ca9e;
     font-family: 'Kanit', sans-serif;
+}
+
+h5{
+    font-family: 'Kanit', sans-serif;
+    color: #fff;
+    font-size: 16px;
 }
 
 p {
@@ -292,13 +288,14 @@ input[type="range"]::-moz-range-thumb {
     color: white;
 }
 
-.animate-fadeIn {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.animate-fadeIn.show {
-    opacity: 1;
-    transform: translateY(0);
+.member-tag{
+    width: 300px;
+    height: 400px;
+    background-color: #1a1a1a;
+    border: #fff solid 1px;
+    border-radius: 8%;
+    text-align: center;
+    padding: 20px;
+    align-items: center;
+    justify-content: center;
 }
