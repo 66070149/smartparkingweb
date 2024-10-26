@@ -18,47 +18,50 @@ async function fetchParkingData() {
     }
 }
 
-async function fetchLightStatus() {
-    try {
-        const response = await fetch(blynkLightUrl);
-        const lightData = await response.text();
-        document.getElementById("light-status").textContent = lightData === "1" ? "ON" : "OFF";
-    } catch (error) {
-        console.error('Error fetching light status:', error);
-        document.getElementById("light-status").textContent = 'Error';
-    }
-}
-
-
-
-function toggleLight() {
-    isLightOn = !isLightOn;
-    /*const lightStatus = document.getElementById("light-status");*/
+document.addEventListener("DOMContentLoaded", () => {
     const toggleButton = document.getElementById("toggle-button");
+    let isLightOn = false;
 
-    if (isLightOn) {
-        /*lightStatus.textContent = "ON";*/
-        toggleButton.textContent = "ON";
-        toggleButton.classList.remove("off");
-        toggleButton.classList.add("on");
-        fetch(blynkSetLightUrl + '1')
-        .catch(error => console.error("Error:", error));
-    } else {
-        /*lightStatus.textContent = "OFF";*/
-        toggleButton.textContent = "OFF";
-        toggleButton.classList.remove("on");
-        toggleButton.classList.add("off");
-        fetch(blynkSetLightUrl + '0')
-        .catch(error => console.error("Error:", error));
+    function updateToggleButton() {
+        toggleButton.textContent = isLightOn ? "ON" : "OFF";
+        toggleButton.classList.toggle("on", isLightOn);
+        toggleButton.classList.toggle("off", !isLightOn);
     }
-}
 
-function updateParkLimit() {
+    function toggleLight() {
+        isLightOn = !isLightOn;
+        updateToggleButton();
+        fetch(blynkSetLightUrl + (isLightOn ? '1' : '0'))
+            .catch(error => console.error("Error:", error));
+    }
+
+    toggleButton.addEventListener("click", toggleLight);
+
+    // Initial fetch for light status
+    async function fetchLightStatus() {
+        try {
+            const response = await fetch(blynkLightUrl);
+            const lightData = await response.text();
+            isLightOn = (lightData === "1");
+            updateToggleButton();
+        } catch (error) {
+            console.error('Error fetching light status:', error);
+        }
+    }
+    setInterval(fetchLightStatus, 2000);
+    fetchLightStatus();
+});
+
+function updateParkLimitFromBlynk() {
     fetch(blynkSliderUrl)
         .then(response => response.text())
         .then(data => {
-            parkLimit = parseInt(data); // แปลงค่าที่ได้เป็นตัวเลข
-            document.getElementById("park-limit").textContent = `Parking Limit: ${parkLimit}`;
+            parkLimit = parseInt(data);
+            const slider = document.getElementById("park-limit-slider");
+            const sliderValueDisplay = document.getElementById("slider-value-display");
+
+            slider.value = parkLimit;
+            sliderValueDisplay.textContent = parkLimit;
         })
         .catch(error => console.error("Error fetching park_limit:", error));
 }
@@ -90,7 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 function fetchData() {
     fetchParkingData();
-    fetchLightStatus();
+
+    updateParkLimitFromBlynk();
 }
 
 setInterval(fetchData, 5000);
