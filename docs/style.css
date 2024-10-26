@@ -238,14 +238,14 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-.image-big {
+.custom-image-big {
     width: 400px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
     height: auto; /* รักษาสัดส่วน */
     border-radius: 8%;
 
 }
 
-.image-mid{
+.custom-image-mid{
     width: 200px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
     height: auto; /* รักษาสัดส่วน */
     border-radius: 8%;
@@ -257,12 +257,12 @@ input[type="range"]::-moz-range-thumb {
         height: 200px
     }
 
-    .image-big {
+    .custom-image-big {
         width: 750px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
         height: auto;
     }
 
-    .image-mid {
+    .custom-image-mid {
         width: 380px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
         height: auto;
     }
