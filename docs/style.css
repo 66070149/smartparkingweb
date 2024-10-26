@@ -7,6 +7,18 @@ body {
     font-family: 'Kanit', sans-serif;
     background-color: #2d2d2d  !important;
     justify-content: center;
+    animation: fadeIn 0.5s ease-in forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 header {
@@ -97,6 +109,7 @@ p {
     flex-direction: column;
     display: flex;
     height: 90px;
+    width: 250px;
     margin-top: 30px;
     padding: 20px;
     background-color: #1a1a1a;
@@ -225,11 +238,17 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-.custom-image-big {
-    width: 800px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
+.image-big {
+    width: 400px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
     height: auto; /* รักษาสัดส่วน */
     border-radius: 8%;
 
+}
+
+.image-mid{
+    width: 200px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
+    height: auto; /* รักษาสัดส่วน */
+    border-radius: 8%;
 }
 
 @media (min-width: 768px) {
@@ -238,15 +257,48 @@ input[type="range"]::-moz-range-thumb {
         height: 200px
     }
 
-    .custom-image-big {
-        width: 800px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
-        height: 350px
+    .image-big {
+        width: 750px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        height: auto;
+    }
+
+    .image-mid {
+        width: 380px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        height: auto;
     }
 }
 
 .center-container{
+    width: 100%;
     display: flex;
     align-items: center;
-    margin-left: 50px;
+    justify-content: center;
 }
 
+.custom-button{
+    width: 350px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ca9e;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.custom-button:hover{
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.animate-fadeIn {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.animate-fadeIn.show {
+    opacity: 1;
+    transform: translateY(0);
+}
