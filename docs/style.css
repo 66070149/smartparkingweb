@@ -242,15 +242,21 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .midpic{
-    width: 200px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
+    width: 160px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
     height: auto; /* รักษาสัดส่วน */
     border-radius: 8%;
 }
 
-@media (min-width: 768px) {
+.profilepic{
+    width: 250px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
+    height: 280px; /* รักษาสัดส่วน */
+    border-radius: 8%;
+}
+
+@media (min-width: 800px) {
     .custom-image {
-        width: 250px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
-        height: 200px
+        width: 220px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        height: 180px
     }
 
     .bigpic {
@@ -259,9 +265,10 @@ input[type="range"]::-moz-range-thumb {
     }
 
     .midpic {
-        width: 380px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        width: 320px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
         height: auto;
     }
+
 }
 
 .center-container{
