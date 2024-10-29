@@ -90,8 +90,16 @@ p {
     background-color: #00ca9e; /* สีเขียวสำหรับสถานะเปิด */
 }
 
+#toggle-button.on:hover {
+    background-color: #00a782; /* สีเขียวสำหรับสถานะเปิด */
+}
+
 #toggle-button.off {
     background-color: #f44336; /* สีแดงสำหรับสถานะปิด */
+}
+
+#toggle-button.off:hover {
+    background-color: #b42e24; /* สีแดงสำหรับสถานะปิด */
 }
 
 /* สถานะการแสดงผล */
@@ -171,27 +179,50 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .nav {
-    height: 40px;
+    height: 50px;
     width: 100%; 
     background-color: #1a1a1a;
     margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    overflow: hidden;
+}
+
+.navbar-brand {
+    font-family: 'Kanit', sans-serif;
+    color: white !important; /* เปลี่ยนสีชื่อโปรเจค */
+    font-size: 20px !important; /* ขนาดตัวอักษร */
+    font-weight: bold;
+}
+
+.nav-pills {
+    border-radius: 0;
+    padding-left: 10px;
+    display: flex; /* ใช้ flexbox สำหรับ nav-pills */
+    margin-left: 20px;
 }
 
 .nav-pills .nav-link {
+    height: 50px;
     border-radius: 0; /* ทำให้มุมไม่โค้งมน */
     background-color: #00ca9e; /* เปลี่ยนสีพื้นหลัง */
     color: white; /* เปลี่ยนสีตัวอักษร */
+    padding-top: 10px;
+    text-align: center; /* จัดให้อยู่กลาง */
+    
 }
 
 .nav-pills .nav-link.active {
+    border-radius: 0;
     background-color: #00ca9e !important; /* สีพื้นหลังที่เข้มขึ้นสำหรับลิงก์ที่ถูกเลือก */
     color: #00ca9e;
 }
 
 .nav-pills .nav-link:hover {
-    background-color: #00ca9e; /* สีพื้นหลังเมื่อเอาเมาส์ไปวาง */
+    border-radius: 0;
+    background-color: #00a782; /* สีพื้นหลังเมื่อเอาเมาส์ไปวาง */
     color: white; /* รักษาสีตัวอักษรให้ขาว */
 }
+
+
 
 .banner {
     position: relative; /* ตั้งค่า position เป็น relative */
@@ -248,8 +279,8 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .profilepic{
-    width: 250px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
-    height: 280px; /* รักษาสัดส่วน */
+    width: 220px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
+    height: 250px; /* รักษาสัดส่วน */
     border-radius: 8%;
 }
 
@@ -288,16 +319,17 @@ input[type="range"]::-moz-range-thumb {
     text-decoration: none;
     border-radius: 8px;
     transition: background-color 0.3s ease;
+    font-family: 'Kanit', sans-serif;
 }
 
 .custom-button:hover{
-    background-color: #1a1a1a;
+    background-color: #00a782;
     color: white;
 }
 
 .member-tag{
-    width: 300px;
-    height: 400px;
+    width: 280px;
+    height: 380px;
     background-color: #1a1a1a;
     border: #fff solid 1px;
     border-radius: 8%;
@@ -305,4 +337,16 @@ input[type="range"]::-moz-range-thumb {
     padding: 20px;
     align-items: center;
     justify-content: center;
+}
+
+.code-container {
+    max-height: 500px;  /* Set the desired max height */
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 15px;
+    background-color: #1a1a1a;
+}
+
+.fixed-top {
+    background-color: #1a1a1a; /* หรือสีที่คุณต้องการ */
 }

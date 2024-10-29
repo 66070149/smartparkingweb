@@ -12,25 +12,29 @@
     <script src="dashboard.js" defer></script>
 </head>
 <body>
-    <div class="fixed-top bg-light">
-        <ul class="nav nav-pills">
-            <li class="nav-item">
-            <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
-            </li>
-            <li class="nav-item">
-            <a class="nav-link" href="aboutus.html">About us</a>
-            </li>
-        </ul>
+    <div class="fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <span class="navbar-brand">SmartParking-Model</span>
+            <ul class="nav nav-pills">
+                <li class="nav-item">
+                <a class="nav-link" href="index.html">Project</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="dashboard.html">Dashboard</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About us</a>
+                </li>
+            </ul>
+        </div>
     </div>
       <div class="banner">
         <div class="container text-center">
-            <h1 class="fw-bold">Smart Parking Dashboard</h1>
+            <h1 class="fw-bold">Dashboard</h1>
             <p>Real-time data from Blynk</p>
         </div>
     </div>
+    <br>
     <div class="row">
         <div class="col">
             <div id="parking-status">
@@ -50,5 +54,8 @@
             </div>
         </div>
     </div>
+    <br>
+    <br>
+    <p>*ต้องมีการเชื่อมต่อ Arduino กับ Wi-Fi ก่อนจึงจะทำงานได้อย่างสมบูรณ์</p>
 </body>
 </html>
