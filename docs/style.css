@@ -211,11 +211,6 @@ input[type="range"]::-moz-range-thumb {
     
 }
 
-.nav-pills .nav-link.active {
-    border-radius: 0;
-    background-color: #00ca9e !important; /* สีพื้นหลังที่เข้มขึ้นสำหรับลิงก์ที่ถูกเลือก */
-    color: #00ca9e;
-}
 
 .nav-pills .nav-link:hover {
     border-radius: 0;
@@ -223,6 +218,44 @@ input[type="range"]::-moz-range-thumb {
     color: white; /* รักษาสีตัวอักษรให้ขาว */
 }
 
+.dropdown-menu {
+    background-color: #1a1a1a; /* เปลี่ยนสีพื้นหลังของ dropdown */
+}
+
+.dropdown-item {
+    color: white; /* เปลี่ยนสีข้อความใน dropdown */
+}
+
+.dropdown-item:hover {
+    background-color: #ffcc00; /* เปลี่ยนสีเมื่อ hover */
+}
+
+.nav-link.active {
+    color: #00ca9e !important; /* สีของตัวอักษรเมื่อ active */
+}
+
+/* เปลี่ยนสีของ Dropdown Item ที่ active */
+.dropdown-item.active {
+    color: #00ca9e ; /* สีของตัวอักษรเมื่อ active */
+}
+
+.navbar-toggler {
+    background-color: #ff5733; /* เปลี่ยนเป็นสีที่ต้องการ */
+}
+
+.custom-navbar {
+    background-color: #252525; /* เปลี่ยนเป็นสีที่คุณต้องการ */
+    color: white; /* เปลี่ยนสีข้อความ */
+}
+
+.custom-navbar .navbar-brand, 
+.custom-navbar .nav-link {
+    color: white; /* เปลี่ยนสีข้อความใน navbar */
+}
+
+.custom-navbar .nav-link:hover {
+    color: #00a782; /* เปลี่ยนสีข้อความเมื่อ hover */
+}
 
 
 .banner {
