@@ -234,14 +234,14 @@ input[type="range"]::-moz-range-thumb {
 
 }
 
-.custom-image-big {
+.bigpic{
     width: 400px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
     height: auto; /* รักษาสัดส่วน */
     border-radius: 8%;
 
 }
 
-.custom-image-mid{
+.midpic{
     width: 200px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
     height: auto; /* รักษาสัดส่วน */
     border-radius: 8%;
@@ -253,12 +253,12 @@ input[type="range"]::-moz-range-thumb {
         height: 200px
     }
 
-    .custom-image-big {
+    .bigpic {
         width: 750px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
         height: auto;
     }
 
-    .custom-image-mid {
+    .midpic {
         width: 380px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
         height: auto;
     }
