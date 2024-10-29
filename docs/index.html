@@ -37,7 +37,7 @@
     </div>
     <div class="container mt-5">
         <h2>บทคัดย่อ</h2>
-        <p>โครงการนี้เป็นการบูรณาการการใช้งาน Microcontroller ในรายวิชา Physical Computing โดยมีวัตถุประสงค์เพื่อพัฒนาระบบ Smart Parking แบบจำลองที่มีประสิทธิภาพในการจัดการและควบคุมลานจอดรถ ระบบประกอบด้วยเซ็นเซอร์ที่ตรวจจับการเคลื่อนไหวของรถทั้งทางเข้าและทางออก โดยเมื่อรถมาถึงทางเข้า ประตูจะเปิดและจำนวนที่จอดรถว่างที่แสดงบนจอ 7-segment จะลดลง เช่นเดียวกัน เมื่อรถเคลื่อนมาถึงทางออก ประตูจะเปิดและจำนวนที่จอดรถว่างจะเพิ่มขึ้น ระบบยังใช้แอปพลิเคชัน Blynk IoT บนโทรศัพท์มือถือสำหรับแสดงจำนวนที่จอดรถว่างที่มีอยู่ในขณะนั้น ปรับจำนวนที่จอดรถทั้งหมด และควบคุมการเปิด-ปิดไฟลานจอดรถ เพื่อให้ผู้ใช้สามารถทราบสถานะที่จอดรถได้อย่างสะดวก ช่วยให้การจัดการลานจอดรถมีประสิทธิภาพมากยิ่งขึ้น</p>
+        <p>โครงการนี้เป็นการบูรณาการการใช้งาน Microcontroller ในรายวิชา Physical Computing โดยมีวัตถุประสงค์เพื่อพัฒนาระบบ Smart Parking แบบจำลองที่มีประสิทธิภาพในการจัดการและควบคุมลานจอดรถ ระบบประกอบด้วยเซ็นเซอร์ที่ตรวจจับวัตถุทั้งทางเข้าและทางออก โดยเมื่อรถมาถึงทางเข้า ประตูจะเปิดและจำนวนที่จอดรถว่างที่แสดงบนจอ 7-segment จะลดลง เช่นเดียวกัน เมื่อรถเคลื่อนมาถึงทางออก ประตูจะเปิดและจำนวนที่จอดรถว่างจะเพิ่มขึ้น ระบบยังใช้แอปพลิเคชัน Blynk IoT บนโทรศัพท์มือถือสำหรับแสดงจำนวนที่จอดรถว่างที่มีอยู่ในขณะนั้น ปรับจำนวนที่จอดรถทั้งหมด และควบคุมการเปิด-ปิดไฟลานจอดรถ เพื่อให้ผู้ใช้สามารถทราบสถานะที่จอดรถได้อย่างสะดวก ช่วยให้การจัดการลานจอดรถมีประสิทธิภาพมากยิ่งขึ้น</p>
         <br>
         <h2>อุปกรณ์</h2>
         <div class="row">
@@ -103,10 +103,6 @@
         <p>- BlynkSimpleWifi.h</p>
         <p>- Servo.h</p>
         <br>
-        <h2>Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/oxL3Sjf3mg0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        <br>
-        <br>
         <h2>Code</h2>
         <a href="https://github.com/66070145/SmartParking-Model" target="_blank" class="custom-button">Go to Github</a>
         <br>
@@ -114,9 +110,9 @@
         <div class="code-container">
             <pre><code class="language-cpp">
             #define BLYNK_PRINT Serial
-            #define BLYNK_TEMPLATE_ID "TMPL6QRjPH69I"
-            #define BLYNK_TEMPLATE_NAME "smartparking"
-            #define BLYNK_AUTH_TOKEN    "po6V3XG9qb7bnsUw9g21VbVpY7JBvgYo"
+            #define BLYNK_TEMPLATE_ID "xxxxxxxxx" //Template ID
+            #define BLYNK_TEMPLATE_NAME "smartparking" //ชื่อ Template
+            #define BLYNK_AUTH_TOKEN    "xxxxxxxxxxxxxxxxx" //TOKEN
     
             #include &lt;SPI.h&gt;
             #include &lt;WiFiS3.h&gt;
@@ -236,6 +232,11 @@
 
             </code></pre>
         </div>
+        <br>
+        <br>
+        <h2>Video</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/h4HkXR3NSI4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        <br>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js" integrity="sha512-7Z9J3l1+EYfeaPKcGXu3MS/7T+w19WtKQY/n+xzmw4hZhJ9tyYmcUS+4QqAlzhicE5LAfMQSF3iFTK9bQdTxXg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </body>

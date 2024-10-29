@@ -330,7 +330,7 @@ input[type="range"]::-moz-range-thumb {
 
 .member-tag{
     width: 280px;
-    height: 380px;
+    height: 400px;
     background-color: #1a1a1a;
     border: #fff solid 1px;
     border-radius: 8%;
