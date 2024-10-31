@@ -87,19 +87,19 @@ p {
 }
 
 #toggle-button.on {
-    background-color: #00ca9e; /* สีเขียวสำหรับสถานะเปิด */
+    background-color: #00ca9e; 
 }
 
 #toggle-button.on:hover {
-    background-color: #00a782; /* สีเขียวสำหรับสถานะเปิด */
+    background-color: #00a782;
 }
 
 #toggle-button.off {
-    background-color: #f44336; /* สีแดงสำหรับสถานะปิด */
+    background-color: #f44336;
 }
 
 #toggle-button.off:hover {
-    background-color: #b42e24; /* สีแดงสำหรับสถานะปิด */
+    background-color: #b42e24;
 }
 
 /* สถานะการแสดงผล */
@@ -161,16 +161,16 @@ input[type="range"]::-moz-range-thumb {
 }
 
 #tool-container {
-    display: flex; /* ใช้ Flexbox เพื่อจัดเรียงในแถว */
-    justify-content: space-between; /* จัดระเบียบให้มีระยะห่างระหว่างรายการ */
-    margin: 30px; /* ระยะห่างรอบๆ tool-container */
+    display: flex;
+    justify-content: space-between;
+    margin: 30px;
     padding: 20px;
 }
 
 #tool-container > div {
-    flex: 1; /* ทำให้แต่ละคอลัมน์มีขนาดเท่า ๆ กัน */
-    margin: 0 10px; /* ระยะห่างระหว่างคอลัมน์ */
-    padding: 10px; /* ขนาดของแต่ละคอลัมน์ */
+    flex: 1;
+    margin: 0 10px;
+    padding: 10px;
 }
 
 #left-tool-container {
@@ -182,31 +182,31 @@ input[type="range"]::-moz-range-thumb {
     height: 50px;
     width: 100%; 
     background-color: #1a1a1a;
-    margin-bottom: 20px; /* เพิ่มระยะห่างด้านล่าง */
+    margin-bottom: 20px;
     overflow: hidden;
 }
 
 .navbar-brand {
     font-family: 'Kanit', sans-serif;
-    color: white !important; /* เปลี่ยนสีชื่อโปรเจค */
-    font-size: 20px !important; /* ขนาดตัวอักษร */
+    color: white !important;
+    font-size: 20px !important;
     font-weight: bold;
 }
 
 .nav-pills {
     border-radius: 0;
     padding-left: 10px;
-    display: flex; /* ใช้ flexbox สำหรับ nav-pills */
+    display: flex;
     margin-left: 20px;
 }
 
 .nav-pills .nav-link {
     height: 50px;
-    border-radius: 0; /* ทำให้มุมไม่โค้งมน */
-    background-color: #00ca9e; /* เปลี่ยนสีพื้นหลัง */
-    color: white; /* เปลี่ยนสีตัวอักษร */
+    border-radius: 0;
+    background-color: #00ca9e;
+    color: white;
     padding-top: 10px;
-    text-align: center; /* จัดให้อยู่กลาง */
+    text-align: center;
     font-family: 'Kanit', sans-serif;
     
 }
@@ -214,78 +214,77 @@ input[type="range"]::-moz-range-thumb {
 
 .nav-pills .nav-link:hover {
     border-radius: 0;
-    background-color: #00a782; /* สีพื้นหลังเมื่อเอาเมาส์ไปวาง */
-    color: white; /* รักษาสีตัวอักษรให้ขาว */
+    background-color: #00a782;
+    color: white;
 }
 
 .dropdown-menu {
-    background-color: #1a1a1a; /* เปลี่ยนสีพื้นหลังของ dropdown */
+    background-color: #1a1a1a;
 }
 
 .dropdown-item {
-    color: white; /* เปลี่ยนสีข้อความใน dropdown */
+    color: white;
 }
 
 .dropdown-item:hover {
-    background-color: #ffcc00; /* เปลี่ยนสีเมื่อ hover */
+    background-color: #00ca9e;
 }
 
 .nav-link.active {
-    color: #00ca9e !important; /* สีของตัวอักษรเมื่อ active */
+    color: #00ca9e !important;
 }
 
-/* เปลี่ยนสีของ Dropdown Item ที่ active */
 .dropdown-item.active {
-    color: #00ca9e ; /* สีของตัวอักษรเมื่อ active */
+    color: #00ca9e ;
 }
 
 .navbar-toggler {
-    background-color: #ff5733; /* เปลี่ยนเป็นสีที่ต้องการ */
+    background-color: #ffffff;
 }
 
 .custom-navbar {
-    background-color: #252525; /* เปลี่ยนเป็นสีที่คุณต้องการ */
-    color: white; /* เปลี่ยนสีข้อความ */
+    background-color: #252525;
+    color: white;
 }
 
 .custom-navbar .navbar-brand, 
 .custom-navbar .nav-link {
-    color: white; /* เปลี่ยนสีข้อความใน navbar */
+    color: white;
 }
 
 .custom-navbar .nav-link:hover {
-    color: #00a782; /* เปลี่ยนสีข้อความเมื่อ hover */
+    color: #00a782;
 }
 
 
 .banner {
-    position: relative; /* ตั้งค่า position เป็น relative */
-    background-image: url('photo/parking.jpg'); /* เปลี่ยน path ให้เป็นที่อยู่ของรูปภาพ */
+    position: relative;
+    background-image: url('photo/parking.jpg');
     width: 100%;
-    background-size: cover; /* ทำให้ภาพครอบคลุมทั้งพื้นที่ */
-    background-position: center; /* จัดตำแหน่งภาพกลาง */
-    height: 300px; /* กำหนดความสูงของ Banner */
-    display: flex; /* ใช้ Flexbox เพื่อจัดตำแหน่ง */
-    align-items: center; /* จัดแนวกลางในแนวตั้ง */
-    justify-content: center; /* จัดแนวกลางในแนวนอน */
-    text-align: center; /* จัดข้อความให้อยู่กลาง */
-    color: white; /* เปลี่ยนสีตัวอักษรให้เป็นสีขาว */
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
 .banner::before {
-    content: ''; /* ใช้สำหรับสร้างเลเยอร์ */
-    position: absolute; /* ตั้งค่า position เป็น absolute */
-    top: 0; /* ให้เริ่มที่ด้านบน */
-    left: 0; /* ให้เริ่มที่ด้านซ้าย */
-    right: 0; /* ให้กว้างเต็มพื้นที่ */
-    bottom: 0; /* ให้ยาวเต็มพื้นที่ */
-    background-color: rgba(0, 0, 0, 0.65); /* สีดำโปร่งใส 50% */
-    z-index: 1; /* ตั้งค่า z-index เพื่อให้เลเยอร์นี้อยู่ด้านหลัง */
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.65);
+    z-index: 1;
 }
 
 .banner h1, .banner p {
-    position: relative; /* ตั้งค่า position เป็น relative */
-    z-index: 2; /* ตั้งค่า z-index เพื่อให้ข้อความอยู่เหนือเลเยอร์โปร่งใส */
+    position: relative;
+    z-index: 2;
 }
 
 .fw-bold{
@@ -293,44 +292,44 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .custom-image {
-    width: 120px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
-    height: 90px; /* รักษาสัดส่วน */
+    width: 120px;
+    height: 90px;
     border-radius: 8%;
 
 }
 
 .bigpic{
-    width: 400px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
-    height: auto; /* รักษาสัดส่วน */
+    width: 400px;
+    height: auto;
     border-radius: 8%;
 
 }
 
 .midpic{
-    width: 160px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
-    height: auto; /* รักษาสัดส่วน */
+    width: 160px;
+    height: auto;
     border-radius: 8%;
 }
 
 .profilepic{
-    width: 220px; /* ขยายเต็มที่ในหน้าจอขนาดเล็ก */
-    height: 250px; /* รักษาสัดส่วน */
+    width: 220px;
+    height: 250px;
     border-radius: 8%;
 }
 
 @media (min-width: 800px) {
     .custom-image {
-        width: 220px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        width: 220px;
         height: 180px
     }
 
     .bigpic {
-        width: 750px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        width: 750px;
         height: auto;
     }
 
     .midpic {
-        width: 320px; /* กำหนดขนาดเฉพาะในหน้าจอขนาดกลางขึ้นไป */
+        width: 320px;
         height: auto;
     }
 
@@ -374,7 +373,7 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .code-container {
-    max-height: 500px;  /* Set the desired max height */
+    max-height: 500px;
     overflow-y: auto;
     border: 1px solid #ddd;
     padding: 15px;
@@ -382,13 +381,13 @@ input[type="range"]::-moz-range-thumb {
 }
 
 .fixed-top {
-    background-color: #1a1a1a; /* หรือสีที่คุณต้องการ */
+    background-color: #1a1a1a;
 }
 
 .responsive-iframe-container {
     position: relative;
     width: 100%;
-    padding-bottom: 56.25%; /* อัตราส่วน 16:9 */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
 }
